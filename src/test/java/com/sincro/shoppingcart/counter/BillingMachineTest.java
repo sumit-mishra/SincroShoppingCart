@@ -1,7 +1,5 @@
-package com.sincro.shoppingcart.discount;
+package com.sincro.shoppingcart.counter;
 
-import com.sincro.shoppingcart.counter.BillingMachine;
-import com.sincro.shoppingcart.counter.DiscountCalculator;
 import com.sincro.shoppingcart.entity.CustomerType;
 import org.junit.Assert;
 import org.junit.Test;
