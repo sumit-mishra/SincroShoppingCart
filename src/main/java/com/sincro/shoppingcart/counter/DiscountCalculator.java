@@ -1,4 +1,4 @@
-package com.sincro.shoppingcart.discount;
+package com.sincro.shoppingcart.counter;
 
 import com.sincro.shoppingcart.entity.CustomerType;
 import com.sincro.shoppingcart.entity.DiscountSlab;
