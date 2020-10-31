@@ -1,0 +1,33 @@
+---
+customer-type-discount:
+  enable: 'YES'
+
+  discount-slabs:
+    - type: REGULAR
+      enable: 'YES'
+      values:
+      - from-amount : 0
+        to-amount : 5000
+        discount-percentage : 0 #Nil
+      - from-amount : 5000
+        to-amount : 10000
+        discount-percentage : 10
+      - from-amount : 10000
+        to-amount : 99999
+        discount-percentage : 20
+
+    - type: PREMIUM
+      enable: 'YES'
+      values:
+        - from-amount : 0
+          toAmount : 4000
+          discount-percentage : 10
+        - from-amount : 4000
+          toAmount : 8000
+          discount-percentage : 15
+        - from-amount : 8000
+          to-amount : 12000
+          discount-percentage : 20
+        - from-amount : 12000
+          to-amount : 99999
+          discount-percentage : 30
