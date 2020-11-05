@@ -3,7 +3,7 @@ package com.sincro.shoppingcart.counter;
 import com.sincro.shoppingcart.entity.CustomerType;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class BillingMachine {
+public class Invoice {
 
   private CustomerType customerType;
   private double purchaseAmount;
@@ -11,7 +11,7 @@ public class BillingMachine {
   @Autowired
   DiscountCalculator calculator;
 
-  public BillingMachine(CustomerType customerType, double purchaseAmount) {
+  public Invoice(CustomerType customerType, double purchaseAmount) {
     this.customerType = customerType;
     this.purchaseAmount = purchaseAmount;
   }

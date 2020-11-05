@@ -20,14 +20,14 @@ public class DiscountCalculator {
   private String enable;
   private List<DiscountSlab> discountSlabs;
 
-  public double getDiscountAmount(final BillingMachine billingMachine) {
-    final Optional<DiscountSlab> discountSlab = getDiscountSlabByCustomerType(billingMachine.getCustomerType());
+  public double getDiscountAmount(final Invoice invoice) {
+    final Optional<DiscountSlab> discountSlab = getDiscountSlabByCustomerType(invoice.getCustomerType());
     double totalDiscount = DEFAULT_DISCOUNT;
     if (discountSlab.isPresent()) {
       DiscountSlab slab = discountSlab.get();
       List<Value> purchaseValues = slab.getValues();
       totalDiscount = purchaseValues.stream()
-          .mapToDouble(discountDetails -> calculateDiscount(discountDetails, billingMachine.getPurchaseAmount())).sum();
+          .mapToDouble(discountDetails -> calculateDiscount(discountDetails, invoice.getPurchaseAmount())).sum();
     }
     return totalDiscount;
   }

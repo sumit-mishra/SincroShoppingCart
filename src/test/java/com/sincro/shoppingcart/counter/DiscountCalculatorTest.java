@@ -17,50 +17,50 @@ public class DiscountCalculatorTest {
 
   @Test
   public void should_returnZero_when_purchaseAmountIs5000ForRegularCustomer() {
-    BillingMachine billingMachine = new BillingMachine(CustomerType.REGULAR, 5000d);
-    double discountedAmount = calculator.getDiscountAmount(billingMachine);
+    Invoice invoice = new Invoice(CustomerType.REGULAR, 5000d);
+    double discountedAmount = calculator.getDiscountAmount(invoice);
     Assert.assertEquals(0d, discountedAmount, 0d);
   }
 
   @Test
   public void should_return500_when_purchaseAmountIs10000ForRegularCustomer() {
-    BillingMachine billingMachine = new BillingMachine(CustomerType.REGULAR, 10000d);
-    double discountedAmount = calculator.getDiscountAmount(billingMachine);
+    Invoice invoice = new Invoice(CustomerType.REGULAR, 10000d);
+    double discountedAmount = calculator.getDiscountAmount(invoice);
     Assert.assertEquals(500d, discountedAmount, 0d);
   }
 
   @Test
   public void should_return1500_when_purchaseAmountIs15000ForRegularCustomer() {
-    BillingMachine billingMachine = new BillingMachine(CustomerType.REGULAR, 15000d);
-    double discountedAmount = calculator.getDiscountAmount(billingMachine);
+    Invoice invoice = new Invoice(CustomerType.REGULAR, 15000d);
+    double discountedAmount = calculator.getDiscountAmount(invoice);
     Assert.assertEquals(1500d, discountedAmount, 0d);
   }
 
   @Test
   public void should_return400_when_purchaseAmountIs15000ForPremiumCustomer() {
-    BillingMachine billingMachine = new BillingMachine(CustomerType.PREMIUM, 4000d);
-    double discountedAmount = calculator.getDiscountAmount(billingMachine);
+    Invoice invoice = new Invoice(CustomerType.PREMIUM, 4000d);
+    double discountedAmount = calculator.getDiscountAmount(invoice);
     Assert.assertEquals(400d, discountedAmount, 0d);
   }
 
   @Test
   public void should_return1000_when_purchaseAmountIs8000ForPremiumCustomer() {
-    BillingMachine billingMachine = new BillingMachine(CustomerType.PREMIUM, 8000d);
-    double discountedAmount = calculator.getDiscountAmount(billingMachine);
+    Invoice invoice = new Invoice(CustomerType.PREMIUM, 8000d);
+    double discountedAmount = calculator.getDiscountAmount(invoice);
     Assert.assertEquals(1000d, discountedAmount, 0d);
   }
 
   @Test
   public void should_return1800_when_purchaseAmountIs12000ForPremiumCustomer() {
-    BillingMachine billingMachine = new BillingMachine(CustomerType.PREMIUM, 12000d);
-    double discountedAmount = calculator.getDiscountAmount(billingMachine);
+    Invoice invoice = new Invoice(CustomerType.PREMIUM, 12000d);
+    double discountedAmount = calculator.getDiscountAmount(invoice);
     Assert.assertEquals(1800d, discountedAmount, 0d);
   }
 
   @Test
   public void should_return4200_when_purchaseAmountIs20000ForPremiumCustomer() {
-    BillingMachine billingMachine = new BillingMachine(CustomerType.PREMIUM, 20000d);
-    double discountedAmount = calculator.getDiscountAmount(billingMachine);
+    Invoice invoice = new Invoice(CustomerType.PREMIUM, 20000d);
+    double discountedAmount = calculator.getDiscountAmount(invoice);
     Assert.assertEquals(4200d, discountedAmount, 0d);
   }
 
